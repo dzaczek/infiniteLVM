@@ -78,7 +78,7 @@ print_help() {
         echo
         echo "Cron Setup:"
         echo "  To run this script every 10 minutes, add the following line to your crontab:"
-        echo "    */10 * * * * /path/to/autolvm.sh"
+        echo "    */10 * * * * /path/to/infinitelvm.sh"
 }
 
 # Parse command-line options
