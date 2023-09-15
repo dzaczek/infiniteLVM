@@ -48,8 +48,8 @@ Run in verbose mode:
 ./my_script.sh -v
 ```
 Run in dry-run mode (with verbose):
-bash
-``` ./my_script.sh -d -v
+```bash
+./my_script.sh -d -v
 ```
 Show help:
 ```bash
