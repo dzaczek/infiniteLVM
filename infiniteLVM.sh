@@ -127,10 +127,10 @@ check_and_extend_lvs() {
                                         foutput "Extending $VG_NAME/$LV_NAME by 1GB..." "info"
                                         if [ $dry -eq 0 ]; then
 
-                                                lvextend -L +1m "$VG_NAME/$LV_NAME"
+                                                lvextend -L +1G "$VG_NAME/$LV_NAME"
                                         else
 
-                                                foutput "executing[ lvextend -L +1m '$VG_NAME/$LV_NAME']" "exec"
+                                                foutput "executing[ lvextend -L +1G '$VG_NAME/$LV_NAME']" "exec"
                                         fi
 
                                         # Resize the filesystem
