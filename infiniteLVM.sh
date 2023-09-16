@@ -106,7 +106,7 @@ shift $((OPTIND - 1))
 # Function to check and extend LVs
 check_and_extend_lvs() {
         # Get a list of all LVs in the specified VG
-        LV_LIST=$(lvdisplay --units $((1042 * 1024 * 1024))b | awk -v vg_name="ubuntu-vg" '/LV Name/{lv_name=$3} /VG Name/{vg=$3} /LV UUID/{uuid=$3} /Block device/{bdev=$3} /LV Size/ && vg == vg_name {print lv_name, $3, uuid, bdev}')
+        LV_LIST=$(lvdisplay --units $((1042 * 1024 * 1024))b | awk -v vg_name=$VG_NAME '/LV Name/{lv_name=$3} /VG Name/{vg=$3} /LV UUID/{uuid=$3} /Block device/{bdev=$3} /LV Size/ && vg == vg_name {print lv_name, $3, uuid, bdev}')
         # Loop through each LV in the VG
         while read -r LV_NAME LV_SIZE LV_UUID DM; do
 
