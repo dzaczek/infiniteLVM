@@ -163,7 +163,7 @@ check_and_extend_lvs() {
 check_free_space_vg() {
         # Get the current free space percentage for the VG
 
-        VG_FREE_GB=$(vgs --noheadings -o vg_name,vg_free "ubuntu-vg" --units $((1024 * 1024 * 1024))b | awk '{ gsub(/[^0-9.]/, "", $2); print $2 }')
+        VG_FREE_GB=$(vgs --noheadings -o vg_name,vg_free $VG_NAME --units $((1024 * 1024 * 1024))b | awk '{ gsub(/[^0-9.]/, "", $2); print $2 }')
 
         if [ "${VG_FREE_GB%.*}" -lt "$MIN_GB_LEFT_VG" ]; then
                 status=$(echo "Free space in $VG_NAME is below the threshold ($MIN_GB_LEFT_VG). Cannot extend LVs.")
