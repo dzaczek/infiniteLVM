@@ -169,7 +169,7 @@ check_free_space_vg() {
                 status=$(echo "Free space in $VG_NAME is below the threshold ($MIN_GB_LEFT_VG). Cannot extend LVs.")
                 foutput "$status" "warning"
         else
-                status=$(echo "Free space in $VG_NAME is sufficient ($VG_FREE_GB%). Proceeding with LV checks...")
+                status=$(echo "Free space in $VG_NAME is sufficient ($VG_FREE_GB). Proceeding with LV checks...")
                 foutput "$status" "info"
                 check_and_extend_lvs
         fi
