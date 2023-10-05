@@ -71,10 +71,10 @@ Show help:
 ## Example crontab configuration
 
 ```bash
-0/10 15-23 * * 1-5 /bin/bash /usr/local/bin/infiniteLVM.sh
-0/10 0-7 * * 1-5 /bin/bash /usr/local/bin/infiniteLVM.sh
-0/10 * * * 6 /bin/bash /usr/local/bin/infiniteLVM.sh
-0/10 * * * 0 /bin/bash /usr/local/bin/infiniteLVM.sh
+*/10 15-23 * * 1-5 /bin/bash /usr/local/bin/infiniteLVM.sh
+*/10 0-7 * * 1-5 /bin/bash /usr/local/bin/infiniteLVM.sh
+*/10 * * * 6 /bin/bash /usr/local/bin/infiniteLVM.sh
+*/10 * * * 0 /bin/bash /usr/local/bin/infiniteLVM.sh
 ```
 
 
