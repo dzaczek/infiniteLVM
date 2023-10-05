@@ -58,7 +58,7 @@ Show help:
 ```
 ## Options
 
-- `-v`: Enable verbose output
+- `-v`: Enable verbose outputn
 - `-d`: Enable dry-run mode. Checks without executing commands.
 - `-h`: Show help message
 
@@ -68,5 +68,14 @@ Show help:
 2. **Minimum Free Space for LVs**: Set the `MIN_FREE_PERCENTAGE_LV` to define the minimum free space in percentage to start LV extension.
 3. **Minimum Free Space for VG**: Set the `MIN_GB_LEFT_VG` to define the minimum free space in GB for the VG.
 
+## Example crontab configuration
+
+```bash
+0/10 15-23 * * 1-5 /bin/bash /usr/local/bin/infiniteLVM.sh
+0/10 0-7 * * 1-5 /bin/bash /usr/local/bin/infiniteLVM.sh
+0/10 * * * 6 /bin/bash /usr/local/bin/infiniteLVM.sh
+0/10 * * * 0 /bin/bash /usr/local/bin/infiniteLVM.sh
+```
 
 
+*
